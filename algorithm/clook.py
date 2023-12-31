@@ -1,5 +1,5 @@
 # C-LOOK Disk Scheduling algorithm
-size = 8
+random_request = 8
 disk_size = 200
 
 # Function to perform C-LOOK on the request array starting from the given head

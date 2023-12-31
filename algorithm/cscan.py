@@ -1,5 +1,5 @@
 # C-SCAN Disk Scheduling algorithm
-size = 8
+random_request = 8
 disk_size = 200
 
 def CSCAN(arr, head):

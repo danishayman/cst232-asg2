@@ -1,6 +1,6 @@
 # SCAN Disk Scheduling algorithm
 
-size = 8
+random_request = 8
 disk_size = 200
  
 def SCAN(arr, head, direction):
