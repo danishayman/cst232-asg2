@@ -1,6 +1,6 @@
 # C-LOOK Disk Scheduling algorithm
+from main import disk_size
 random_request = 8
-disk_size = 200
 
 # Function to perform C-LOOK on the request array starting from the given head
 def CLOOK(arr, head):
