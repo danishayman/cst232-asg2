@@ -11,9 +11,7 @@ def SCAN(arr, head, direction):
     right = []
     seek_sequence = []
  
-    # Appending end values
-    # which has to be visited
-    # before reversing the direction
+    # Appending end values which has to be visited before reversing the direction
     if (direction == "left"):
         left.append(0)
     elif (direction == "right"):
@@ -29,9 +27,7 @@ def SCAN(arr, head, direction):
     left.sort()
     right.sort()
  
-    # Run the while loop two times.
-    # one by one scanning right
-    # and left of the head
+    # Run the while loop two times one by one scanning righ and left of the head
     run = 2
     while (run != 0):
         if (direction == "left"):
@@ -57,8 +53,7 @@ def SCAN(arr, head, direction):
             for i in range(len(right)):
                 cur_track = right[i]
                  
-                # Appending current track to seek 
-                # sequence
+                # Appending current track to seek sequence
                 seek_sequence.append(cur_track)
  
                 # Calculate absolute distance

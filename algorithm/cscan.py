@@ -11,16 +11,13 @@ def CSCAN(arr, head):
 	right = []
 	seek_sequence = []
 
-	# Appending end values
-	# which has to be visited
-	# before reversing the direction
+
+	# Appending end values which has to be visited before reversing the direction
 	left.append(0)
 	right.append(disk_size - 1)
 
-	# Tracks on the left of the
-	# head will be serviced when
-	# once the head comes back
-	# to the beginning (left end).
+
+	# Tracks on the left of the head will be serviced when once the head comes back to the beginning (left end).
 	for i in range(size):
 		if (arr[i] < head):
 			left.append(arr[i])
@@ -31,14 +28,11 @@ def CSCAN(arr, head):
 	left.sort()
 	right.sort()
 
-	# First service the requests
-	# on the right side of the
-	# head.
+	# First service the requests on the right side of the head.
 	for i in range(len(right)):
 		cur_track = right[i]
 
-		# Appending current track
-		# to seek sequence
+		# Appending current track to seek sequence
 		seek_sequence.append(cur_track)
 
 		# Calculate absolute distance
@@ -50,20 +44,17 @@ def CSCAN(arr, head):
 		# Accessed track is now new head
 		head = cur_track
 
-	# Once reached the right end
-	# jump to the beginning.
+	# Once reached the right end jump to the beginning.
 	head = 0
 
 	# adding seek count for head returning from 199 to 0
 	seek_count += (disk_size - 1)
 
-	# Now service the requests again
-	# which are left.
+	# Now service the requests again which are left.
 	for i in range(len(left)):
 		cur_track = left[i]
 
-		# Appending current track
-		# to seek sequence
+		# Appending current track to seek sequence
 		seek_sequence.append(cur_track)
 
 		# Calculate absolute distance

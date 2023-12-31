@@ -2,8 +2,7 @@
 size = 8
 disk_size = 200
 
-# Function to perform C-LOOK on the request
-# array starting from the given head
+# Function to perform C-LOOK on the request array starting from the given head
 def CLOOK(arr, head):
 	
 	seek_count = 0
@@ -15,10 +14,7 @@ def CLOOK(arr, head):
 
 	seek_sequence = []
 
-	# Tracks on the left of the
-	# head will be serviced when
-	# once the head comes back
-	# to the beginning (left end)
+	# Tracks on the left of the head will be serviced when once the head comes back to the beginning (left end)
 	for i in range(size):
 		if (arr[i] < head):
 			left.append(arr[i])
@@ -29,14 +25,11 @@ def CLOOK(arr, head):
 	left.sort()
 	right.sort()
 
-	# First service the requests
-	# on the right side of the
-	# head
+	# First service the requests on the right side of the head
 	for i in range(len(right)):
 		cur_track = right[i]
 		
-		# Appending current track 
-		# seek sequence
+		# Appending current track  seek sequence
 		seek_sequence.append(cur_track)
 
 		# Calculate absolute distance
@@ -48,20 +41,15 @@ def CLOOK(arr, head):
 		# Accessed track is now new head
 		head = cur_track
 
-	# Once reached the right end
-	# jump to the last track that
-	# is needed to be serviced in
-	# left direction
+	# Once reached the right end jump to the last track that is needed to be serviced in left direction
 	seek_count += abs(head - left[0])
 	head = left[0]
 
-	# Now service the requests again
-	# which are left
+	# Now service the requests again which are left
 	for i in range(len(left)):
 		cur_track = left[i]
 
-		# Appending current track to
-		# seek sequence
+		# Appending current track to seek sequence
 		seek_sequence.append(cur_track)
 
 		# Calculate absolute distance
