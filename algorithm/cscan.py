@@ -2,7 +2,6 @@
 size = 8
 disk_size = 200
 
-
 def CSCAN(arr, head):
 
 	seek_count = 0
