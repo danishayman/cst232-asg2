@@ -1,9 +1,6 @@
 # SCAN Disk Scheduling algorithm
-from main import disk_size
-random_request = 8
 
- 
-def SCAN(arr, head, direction):
+def  SCAN(disk_size, arr, head, direction):
  
     seek_count = 0
     distance, cur_track = 0, 0
@@ -17,7 +14,7 @@ def SCAN(arr, head, direction):
     elif (direction == "right"):
         right.append(disk_size - 1)
  
-    for i in range(random_request):
+    for i in range(len(arr)):
         if (arr[i] < head):
             left.append(arr[i])
         if (arr[i] > head):

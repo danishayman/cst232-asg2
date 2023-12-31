@@ -1,8 +1,8 @@
 # C-SCAN Disk Scheduling algorithm
-from main import disk_size
-random_request = 8
+# from main import disk_size
+# from main import random_request
 
-def CSCAN(arr, head):
+def CSCAN(disk_size, arr, head):
 
 	seek_count = 0
 	distance = 0
@@ -18,7 +18,7 @@ def CSCAN(arr, head):
 
 
 	# Tracks on the left of the head will be serviced when once the head comes back to the beginning (left end).
-	for i in range(random_request):
+	for i in range(len(arr)):
 		if (arr[i] < head):
 			left.append(arr[i])
 		if (arr[i] > head):
