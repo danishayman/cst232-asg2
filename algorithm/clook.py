@@ -57,9 +57,12 @@ def CLOOK(arr, head):
 		# Accessed track is now the new head
 		head = cur_track
 
-	print("Total number of seek operations =",
-		seek_count)
-	print("Seek Sequence is")
+	print("Total number of seek operations =", seek_count)
+	# Calculate average seek time
+	avg_seek_time = seek_count / len(arr)
+	print("Average seek time =", avg_seek_time)
 
-	for i in range(len(seek_sequence)):
-		print(seek_sequence[i])
+
+	# print("Seek Sequence is")
+	# for i in range(len(seek_sequence)):
+	# 	print(seek_sequence[i])
