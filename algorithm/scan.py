@@ -17,7 +17,7 @@ def SCAN(arr, head, direction):
     elif (direction == "right"):
         right.append(disk_size - 1)
  
-    for i in range(size):
+    for i in range(random_request):
         if (arr[i] < head):
             left.append(arr[i])
         if (arr[i] > head):

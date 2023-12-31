@@ -15,7 +15,7 @@ def CLOOK(arr, head):
 	seek_sequence = []
 
 	# Tracks on the left of the head will be serviced when once the head comes back to the beginning (left end)
-	for i in range(size):
+	for i in range(random_request):
 		if (arr[i] < head):
 			left.append(arr[i])
 		if (arr[i] > head):
