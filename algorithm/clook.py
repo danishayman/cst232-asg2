@@ -59,7 +59,7 @@ def CLOOK(arr, head):
 
 	print("Total number of seek operations =", seek_count)
 	# Calculate average seek time
-	clook_avg = seek_count / len(arr)
+	clook_avg = seek_count / len(seek_sequence)
 	print("Average seek time =", clook_avg)
 	
 

@@ -70,7 +70,7 @@ def  SCAN(disk_size, arr, head, direction):
 
 
     # Calculate average seek time
-    scan_avg = seek_count / len(arr)
+    scan_avg = seek_count / len(seek_sequence)
     print("Average seek time =", scan_avg)
     
     

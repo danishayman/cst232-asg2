@@ -67,7 +67,7 @@ def CSCAN(disk_size, arr, head):
 	print("Total number of seek operations =", seek_count)
 	
     # Calculate average seek time
-	cscan_avg = seek_count / len(arr)
+	cscan_avg = seek_count / len(seek_sequence)
 	print("Average seek time =", cscan_avg)
 	
 
