@@ -68,8 +68,8 @@ def CLOOK(arr, head):
 	print("Worst-case seek time =", clook_worst)
 
 
-	print("Seek Sequence is")
+	print("Seek Sequence is: ", end=" ")
 	for i in range(len(seek_sequence)):
-		print(seek_sequence[i])
+		print(seek_sequence[i], end=", ")
 
 	return clook_avg, clook_worst

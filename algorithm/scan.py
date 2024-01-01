@@ -80,9 +80,9 @@ def  SCAN(disk_size, arr, head, direction):
     print("Worst-case seek time =", scan_worst)
 
     
-    print("Seek Sequence is")
+    print("Seek Sequence is: ", end=" ")
     for i in range(len(seek_sequence)):
-        print(seek_sequence[i])
+        print(seek_sequence[i], end=", ")
 
 
     return scan_avg, scan_worst

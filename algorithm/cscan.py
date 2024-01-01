@@ -76,9 +76,9 @@ def CSCAN(disk_size, arr, head):
 	print("Worst-case seek time =", cscan_worst)
 
 
-	print("Seek Sequence is")
+	print("Seek Sequence is: ", end=" ")
 	for i in range(len(seek_sequence)):
-		print(seek_sequence[i])
+		print(seek_sequence[i], end=", ")
 
 	return cscan_avg, cscan_worst
 
