@@ -70,15 +70,20 @@ def  SCAN(disk_size, arr, head, direction):
 
 
     # Calculate average seek time
-    avg_seek_time = seek_count / len(arr)
-    print("Average seek time =", avg_seek_time)
+    scan_avg = seek_count / len(arr)
+    print("Average seek time =", scan_avg)
+    
     
 
      # Calculate worst-case seek time
-    longest_seek_time = max([abs(b - a) for a, b in zip(seek_sequence[:-1], seek_sequence[1:])])
-    print("Worst-case seek time =", longest_seek_time)
+    scan_worst = max([abs(b - a) for a, b in zip(seek_sequence[:-1], seek_sequence[1:])])
+    print("Worst-case seek time =", scan_worst)
 
     
     print("Seek Sequence is")
     for i in range(len(seek_sequence)):
         print(seek_sequence[i])
+
+
+    return scan_avg, scan_worst
+    

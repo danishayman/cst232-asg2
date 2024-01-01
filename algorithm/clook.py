@@ -59,14 +59,17 @@ def CLOOK(arr, head):
 
 	print("Total number of seek operations =", seek_count)
 	# Calculate average seek time
-	avg_seek_time = seek_count / len(arr)
-	print("Average seek time =", avg_seek_time)
+	clook_avg = seek_count / len(arr)
+	print("Average seek time =", clook_avg)
+	
 
 	# Calculate Worst-case seek time
-	longest_seek_time = max([abs(b - a) for a, b in zip(seek_sequence[:-1], seek_sequence[1:])])
-	print("Worst-case seek time =", longest_seek_time)
+	clook_worst= max([abs(b - a) for a, b in zip(seek_sequence[:-1], seek_sequence[1:])])
+	print("Worst-case seek time =", clook_worst)
 
 
 	print("Seek Sequence is")
 	for i in range(len(seek_sequence)):
 		print(seek_sequence[i])
+
+	return clook_avg, clook_worst
