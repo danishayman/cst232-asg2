@@ -10,6 +10,9 @@ def CLOOK(arr, head):
 
 	seek_sequence = []
 
+	# Appending head to seek sequence
+	seek_sequence.append(head)
+
 	# Tracks on the left of the head will be serviced when once the head comes back to the beginning (left end)
 	for i in range(len(arr)):
 		if (arr[i] < head):

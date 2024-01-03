@@ -9,6 +9,9 @@ def CSCAN(disk_size, arr, head):
 	right = []
 	seek_sequence = []
 
+	# Append head to seek sequence
+	seek_sequence.append(head)
+
 
 	# Appending end values which has to be visited before reversing the direction
 	left.append(0)
