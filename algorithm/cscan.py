@@ -77,8 +77,10 @@ def CSCAN(disk_size, arr, head):
 
 
 	print("Seek Sequence is: ", end=" ")
-	for i in range(len(seek_sequence)):
+	for i in range(len(seek_sequence) - 1):
 		print(seek_sequence[i], end=", ")
+	print(seek_sequence[-1])
 
-	return cscan_avg, cscan_worst
+
+	return cscan_avg, cscan_worst, seek_sequence
 

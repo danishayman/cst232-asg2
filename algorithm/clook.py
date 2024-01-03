@@ -69,7 +69,9 @@ def CLOOK(arr, head):
 
 
 	print("Seek Sequence is: ", end=" ")
-	for i in range(len(seek_sequence)):
+	for i in range(len(seek_sequence) - 1):
 		print(seek_sequence[i], end=", ")
+	print(seek_sequence[-1])
 
-	return clook_avg, clook_worst
+
+	return clook_avg, clook_worst, seek_sequence

@@ -81,9 +81,11 @@ def  SCAN(disk_size, arr, head, direction):
 
     
     print("Seek Sequence is: ", end=" ")
-    for i in range(len(seek_sequence)):
+    for i in range(len(seek_sequence) - 1):
         print(seek_sequence[i], end=", ")
+    print(seek_sequence[-1])
+        
 
 
-    return scan_avg, scan_worst
+    return scan_avg, scan_worst, seek_sequence
     
