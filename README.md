@@ -21,7 +21,7 @@ python main.py
 ```
 
 You may change the values of 
-disk_size, head, direction ("left" / "right") and random requests in the main.py file as needed.
+disk_size, head, direction ("left" / "right") and random requests in the file as needed.
 
 
 3. View the generated bar charts illustrating average and worst-case seek times in the .ipynb file.
