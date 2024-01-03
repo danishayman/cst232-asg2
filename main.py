@@ -1,9 +1,3 @@
-import random
-from algorithm.scan import SCAN
-from algorithm.cscan import CSCAN
-from algorithm.clook import CLOOK
-
-
 #initialization
 disk_size = 200
 head = 50
