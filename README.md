@@ -33,16 +33,21 @@ The simulation is implemented as a Jupyter Notebook, allowing users to interacti
     pip install matplotlib numpy
     ```
 
-3. Open the Jupyter Notebook:
+3. Install Jupyter: 
     ```bash
-    jupyter notebook CST232-Asg2.ipynb
+    pip install jupyter
     ```
 
-4. Inside the Jupyter Notebook, run the cells to execute the simulation.
+4. Open the Jupyter Notebook:
+    ```bash
+    jupyter-notebook CST232-Asg2.ipynb
+    ```
 
-5. View the results and visualizations directly within the notebook.
+5. Inside the Jupyter Notebook, run the cells to execute the simulation.
 
-6. Feel free to change the following values in the Initialization according to your needs:
+6. View the results and visualizations directly within the notebook.
+
+7. Feel free to change the following values in the Initialization according to your needs:
    - `head`: The initial head position.
    - `direction`: The direction of head movement ( "left" / "right" ).
    - `random_request`: The number of random disk requests.
