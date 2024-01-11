@@ -67,10 +67,17 @@ def CSCAN(disk_size, arr, head):
 		# Accessed track is now the new head
 		head = cur_track
 
-	print("Total number of seek operations =", seek_count)
+	print("Seek Sequence is: ", end=" ")
+	for i in range(len(seek_sequence) - 1):
+		print(seek_sequence[i], end=", ")
+	print(seek_sequence[-1])
+ 
+	print("Total number of seek operations =", len(seek_sequence)-1)
+
+	print("Seek time =" , seek_count)
 	
     # Calculate average seek time
-	cscan_avg = seek_count / len(seek_sequence)
+	cscan_avg = seek_count / (len(seek_sequence)-1)
 	print("Average seek time =", cscan_avg)
 	
 
@@ -79,10 +86,6 @@ def CSCAN(disk_size, arr, head):
 	print("Worst-case seek time =", cscan_worst)
 
 
-	print("Seek Sequence is: ", end=" ")
-	for i in range(len(seek_sequence) - 1):
-		print(seek_sequence[i], end=", ")
-	print(seek_sequence[-1])
 
 
 	return cscan_avg, cscan_worst, seek_sequence

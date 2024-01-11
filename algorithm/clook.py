@@ -60,21 +60,22 @@ def CLOOK(arr, head):
 		# Accessed track is now the new head
 		head = cur_track
 
-	print("Total number of seek operations =", seek_count)
+	print("Seek Sequence is: ", end=" ")
+	for i in range(len(seek_sequence) - 1):
+		print(seek_sequence[i], end=", ")
+	print(seek_sequence[-1])
+ 
+	print("Total number of seek operations =", len(seek_sequence)-1)
+
+	print("Seek time =" , seek_count)
+
 	# Calculate average seek time
-	clook_avg = seek_count / len(seek_sequence)
+	clook_avg = seek_count / (len(seek_sequence)-1)
 	print("Average seek time =", clook_avg)
 	
 
 	# Calculate Worst-case seek time
 	clook_worst= max([abs(b - a) for a, b in zip(seek_sequence[:-1], seek_sequence[1:])])
 	print("Worst-case seek time =", clook_worst)
-
-
-	print("Seek Sequence is: ", end=" ")
-	for i in range(len(seek_sequence) - 1):
-		print(seek_sequence[i], end=", ")
-	print(seek_sequence[-1])
-
 
 	return clook_avg, clook_worst, seek_sequence
