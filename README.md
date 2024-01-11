@@ -25,7 +25,7 @@ The simulation is implemented as a Jupyter Notebook, allowing users to interacti
 
    ```bash
    git clone https://github.com/danishayman/cst232-asg2
-   cd disk-scheduling-simulation
+   cd cst232-asg2
    ```
 
 2. Install the required dependencies:
